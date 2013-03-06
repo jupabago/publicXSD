@@ -194,7 +194,7 @@
 	<xsd:complexType name="urlType">
 		<xsd:simpleContent>
 			<xsd:extension base="uriType">
-				<xsd:attribute name="title" type="xsd:string"/>
+				<xsd:attribute name="title" type="xsd:string" use="required"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
