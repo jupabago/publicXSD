@@ -110,6 +110,21 @@
 					<xsd:attribute name="pID" type="xsd:string" use="required" />
 				</xsd:complexType>
 
+	<!-- 		
+		All IDs are in the form of:
+		
+		[Capital Letter][Capital Letter][#][#][#][#]
+		First Two Letters of Significant Name (ignore articles)
+		If one word, use first two letters of word
+		4 Numbers represent a year
+		If no year, use zeros
+		
+		EX:
+		
+		Holocaust 1930 becomes, HO1930
+		National Free Trade Agreement (NAFTA) 1994 becomes, NF1994
+	-->
+
 
 	<xsd:simpleType name="idType">
 	    <xsd:restriction base="xsd:string">
@@ -291,7 +306,7 @@
 
 		<xsd:sequence>
 			
-			<xsd:element name="info" type="infoType"
+			<xsd:element name="Info" type="infoType"
 							minOccurs="1" maxOccurs="1">
 			</xsd:element>
 			<xsd:element name="History" type="xsd:string"
@@ -331,7 +346,7 @@
 	
 	<xsd:complexType name="oType">
 		<xsd:sequence>
-			<xsd:element name="info" type="infoType"
+			<xsd:element name="Info" type="infoType"
 							minOccurs="1" maxOccurs="1">
 			</xsd:element>
 			<xsd:element name="History" type="xsd:string"
@@ -365,7 +380,7 @@
 	<xsd:complexType name="pType">
 
 		<xsd:sequence>
-			<xsd:element name="info" type="infoType"
+			<xsd:element name="Info" type="infoType"
 							minOccurs="1" maxOccurs="1">
 			</xsd:element>
 			<xsd:element name="History" type="xsd:string"
